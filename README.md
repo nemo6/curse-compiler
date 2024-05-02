@@ -1,0 +1,2 @@
+# curse-compiler
+test
