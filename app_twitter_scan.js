@@ -17,7 +17,7 @@
 
     let args = []
 	args.push( value )
-	return { args: args, value: parse(value) ) }
+	return { args: args, value: parse(x) ) }
 
 }
 .thru( ({args,value}=x) => {
