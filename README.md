@@ -27,11 +27,16 @@ regexReplaceCoffee({
 
 	scope    : /".*?"/g,
 	target   : /{/g,
-	replace  : "",
+	replace  : "#{",
 	callback : m => m.filter( x => /{/.test(x.value) && /}/.test(x.value) ),
 	name     : "template strings"
 
 })
+```
+
+```
+In this exemple, "regexReplaceCoffee" change "hello {name}" => "hello #{name}"
+and "hello2 {name}" => "hello2 #{name}"
 ```
 
 ```js
