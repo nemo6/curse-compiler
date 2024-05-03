@@ -40,8 +40,9 @@ In this exemple, **regexReplaceCoffee** change :
 "hello2 {name}" => "hello2 #{name}"
 ```
 
-```js
+#offset madness
 
+```js
 // in regexReplaceCoffee function :
 
 for( let [i,x] of allRegexMatch.entries() ){
