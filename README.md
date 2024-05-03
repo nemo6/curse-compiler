@@ -40,7 +40,7 @@ In this exemple, **regexReplaceCoffee** change :
 "hello2 {name}" => "hello2 #{name}"
 ```
 
-#offset madness
+# offset madness
 
 ```js
 // in regexReplaceCoffee function :
