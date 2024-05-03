@@ -34,12 +34,10 @@ regexReplaceCoffee({
 })
 ```
 
-```
 In this exemple, **regexReplaceCoffee** change :
-
-	"hello {name}"  => "hello #{name}"
-	"hello2 {name}" => "hello2 #{name}"
-
+```
+"hello {name}"  => "hello #{name}"
+"hello2 {name}" => "hello2 #{name}"
 ```
 
 ```js
