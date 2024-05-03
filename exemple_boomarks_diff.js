@@ -1,4 +1,3 @@
-
 let a = _("/brave-save-bookmarks/Bookmarks")
 .fchain( (x,i,p,last) => i == "url" && { url:x,title:last(p,1).name,folder:last(p,3).name } )
 .filter( bar )
@@ -81,25 +80,3 @@ function renderRange(x){
     })(a,b)
 
 }
-
-//
-    
-    _()
-    .arr(...m)
-    .tap( ( [a,b] = x ) => {
-      remove_hastag(a.value)
-      remove_hastag(b.value)
-    })
-    .diffBy( "new_title" )
-    .diffBy( "url" )
-    .tap( ( [a,b] = x ) => {
-      console.log(a.value.length)
-      console.log(b.value.length)
-    } )
-    .renderRange()
-    .Router( "/" , "html" )
-    .valueOf()
-
-//
-
-serverEx()
