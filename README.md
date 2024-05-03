@@ -69,7 +69,7 @@ for( let [i,x] of allRegexMatch.entries() ){
 	
 	local_offset += offset
 	
-	// ...
+	// ....
 
 }
 ```
