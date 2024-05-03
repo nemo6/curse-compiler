@@ -35,8 +35,11 @@ regexReplaceCoffee({
 ```
 
 ```
-In this exemple, "regexReplaceCoffee" change "hello {name}" => "hello #{name}"
-and "hello2 {name}" => "hello2 #{name}"
+In this exemple, "regexReplaceCoffee" change :
+
+	"hello {name}"  => "hello #{name}"
+	"hello2 {name}" => "hello2 #{name}"
+
 ```
 
 ```js
