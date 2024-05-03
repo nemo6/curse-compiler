@@ -1,10 +1,12 @@
+const _ = require("lodash")
+
 // vanilla version
 
 µ("twitter.txt")
 .parse()
 .regexColor()
-.thru( x => {
-    console.log( _.getArgs(0) )
+.tap( x => {
+	console.log( _.getArgs(0) )
 })
 .render()
 .Router( "/", "html" )
@@ -19,14 +21,14 @@
 	args.push( value )
 	return { args: args, value: parse(x) ) }
 
-}
-.thru( ({args,value}=x) => {
+})
+.thru( ( {args,value} = x ) => {
 
 	args.push( value )
 	return { args: args, value: regexColor(value) ) }
 
-}
-.thru( ({args,value}=x) => {
+})
+.tap( ( {args,value} = x ) => {
 
     // console.log( _.getArgs(0) )
 
@@ -43,7 +45,7 @@ serverEx()
 
 //
 
-function µ(x){ _.mixin({parse,serverEx,regexColor,scrape_hastag,render,Router});return _(x) }
+function µ(x){ _.mixin({parse,serverEx,regexColor,scrape_hastag,render,Router});return _.chain(x) }
 
 //
 
@@ -71,7 +73,5 @@ function space_divide(x){
 }
 
 function Router(a,b,n){
-
 	router.get( b, ( req, res ) => {res.writeHead(200,{"content-type":`text/${n};charset=utf8`});res.end(a)} )
-
 }
