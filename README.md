@@ -8,17 +8,26 @@
 
 ![](https://github.com/nemo6/curse-compiler/blob/main/c2.png)
 
-# substring/replace hell
+# regex match and replace hell
+
+```coffee
+print yearsOld
+
+str = "hello {name}"
+
+print users
+
+str = "hello2 {name}"
+```
 
 ```js
+regexReplaceCoffee({
 
-	regexReplaceCoffee({
+	scope    : /".*?"/g,
+	target   : /{/g,
+	replace  : "",
+	callback : m => m.filter( x => /{/.test(x.value) && /}/.test(x.value) ),
+	name     : "template strings"
 
-		scope    : /".*?"/g,
-		target   : /{/g,
-		replace  : "",
-		callback : m => m.filter( x => /{/.test(x.value) && /}/.test(x.value) ),
-		name     : "template strings"
-
-	})
+})
 ```
