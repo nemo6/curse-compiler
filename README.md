@@ -57,12 +57,6 @@ for( let [i,x] of allRegexMatch.entries() ){
 	
 	let offset = b.length - a.length
 	
-	/* if local_offset is positive (+)
-	only value "lastIndex" need to change
-	if it is the oppostive, local_offset is negative (-)
-	the value "index" need to change, not the value "lastIndex"
-	*/
-	
 	if( local_offset >= 0 )
 	lastIndex = lastIndex + local_offset
 	else
@@ -77,6 +71,72 @@ for( let [i,x] of allRegexMatch.entries() ){
 	local_offset += offset
 	
 	// ....
+
+}
+```
+
+# span regex replace
+
+```js
+// in highlightChange function :
+
+for( let [i,x] of m.entries() ){
+
+	let {
+
+	  index,
+	  lastIndex,
+	  offset,
+	  local_offset,
+	  local_iteration,
+	  first_local_iteation,
+	  loop,
+
+	} = x
+
+	console.log( "highlightChange", index,lastIndex,local_offset )
+
+	/* if local_offset is positive (+)
+	only value "lastIndex" need to change
+	if it is the oppostive, local_offset is negative (-)
+	the value "index" need to change, not the value "lastIndex"
+	*/
+	
+	if( local_offset >= 0 ){
+
+		lastIndex += local_offset
+
+	}
+	else{
+
+		if( first_local_iteation ){
+
+			lastIndex += local_offset
+
+		}
+
+	}
+
+	let value = file.substring( index, lastIndex )
+
+	//
+
+	let a = value.length
+
+	value = `<span style="background:${colors[loop]};">${value}</span>`
+
+	let b = value.length
+
+	//
+
+	index     += span_offset
+	lastIndex += span_offset
+
+	span_file = setCharAt( span_file,index,lastIndex,value )
+
+	span_offset += ( b - a )
+
+	// ...
 
 }
 ```
