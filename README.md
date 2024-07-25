@@ -2,7 +2,7 @@
 
 ```vanilla version```
 
-![](https://github.com/nemo6/curse-compiler/blob/main/img/a1.png)
+![](https://github.com/nemo6/curse-compiler/blob/main/img/a3.png)
 
 ```awfull compile version```
 
