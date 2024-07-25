@@ -2,11 +2,11 @@
 
 ```vanilla version```
 
-![](https://github.com/nemo6/curse-compiler/blob/main/c1.png)
+![](https://github.com/nemo6/curse-compiler/blob/main/a1.png)
 
 ```awfull compile version```
 
-![](https://github.com/nemo6/curse-compiler/blob/main/c2.png)
+![](https://github.com/nemo6/curse-compiler/blob/main/a2.png)
 
 # regex match and replace hell
 
